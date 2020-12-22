@@ -221,11 +221,6 @@ header {
   padding-top: 94px;
 }
 
-.advantages-title {
-  height: 0;
-  overflow: hidden;
-}
-
 .advantages-list {
   display: flex;
   justify-content: space-between;
@@ -466,11 +461,11 @@ address {
   margin-left: 70px;
   margin-top: 12px;
 }
-.join-text {
+.join-text,
+.subscribe-text {
   margin-bottom: 20px;
 
-  font-family: Roboto;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
@@ -490,6 +485,68 @@ address {
 .join .social-links-link {
   background-color: rgba(255, 255, 255, 0.1);
 }
+
+.subscribe {
+  margin-left: 93px;
+  margin-top: 12px;
+}
+
+.subscribe-form {
+  display: flex;
+  align-items: center;
+}
+
+.email {
+  display: inline-flex;
+  width: 358px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background: #2f303a;
+  padding-left: 16px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-right: 12px;
+}
+
+.email::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  align-items: center;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.submit-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  width: 200px;
+  height: 50px;
+  padding-left: 29px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: #2196f3;
+  border: 0;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+}
+
+.submit-icon {
+  position: absolute;
+  bottom: 13px;
+  right: 28px;
+}
+
 /* ========End Footer======================= */
 
 /* ========Portfolio======================= */
@@ -628,6 +685,7 @@ address {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   transform: translate(-50%, -50%);
+  padding: 40px;
 }
 
 .close-button {
@@ -650,4 +708,157 @@ address {
   visibility: hidden;
   pointer-events: none;
 }
+.modal-text {
+  margin-bottom: 12px;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--main-color);
+}
+.modal-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  /* display: flex;
+  flex-direction: column; */
+  margin-bottom: 10px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: var(--secondary-color);
+}
+
+label.form-label:last-child {
+  margin-bottom: 20px;
+}
+
+.form-input-wrapper {
+  position: relative;
+  display: block;
+  margin-top: 4px;
+}
+
+.form-input:focus,
+.comment:focus {
+  outline: none;
+  border: 1px solid var(--accent-color);
+}
+
+.modal_input-icon {
+  transition: fill 250ms var(--timing-fn);
+}
+
+.form-input:focus + .modal_input-icon {
+  fill: var(--accent-color);
+}
+
+.form-input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding: 0 0 0 42px;
+  transition: border 250ms var(--timing-fn);
+}
+
+.comment {
+  width: 100%;
+  height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  margin-top: 4px;
+  margin-bottom: 10px;
+  padding: 12px 16px;
+  resize: none;
+  transition: border 250ms var(--timing-fn);
+}
+
+.comment::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.modal_input-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.modal-form-policy-text::before {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  background-image: url(../images/svg/checkbox-policy1.svg);
+  background-repeat: no-repeat;
+  background-size: 16px 15px;
+  background-position: center;
+  margin-right: 7px;
+}
+
+.modal-form-policy:checked + .modal-form-policy-text::before {
+  background: var(--accent-color);
+  border-radius: 2px;
+  background-image: url(../images/svg/checkbox-policy.svg);
+  background-repeat: no-repeat;
+  background-size: 11px 8px;
+  background-position: center;
+}
+
+.modal-form-policy-text {
+  margin: 0 auto;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--secondary-color);
+}
+
+.contract {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  text-decoration-line: underline;
+  color: var(--accent-color);
+}
+
+.modal-form-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px auto 0;
+  width: 200px;
+  height: 50px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  background: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: 0;
+}
 /* ========End Modal======================= */
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}

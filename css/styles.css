@@ -426,7 +426,13 @@ footer {
 
 .footer .container {
   display: flex;
+  justify-content: space-between;
 }
+
+.footer-left-side {
+  display: flex;
+}
+
 .footer .logo {
   display: block;
   margin-bottom: 20px;
@@ -487,7 +493,6 @@ address {
 }
 
 .subscribe {
-  margin-left: 93px;
   margin-top: 12px;
 }
 
